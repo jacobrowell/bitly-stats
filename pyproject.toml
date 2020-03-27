@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "bitly-stats"
+version = "0.1.0"
+description = ""
+authors = ["KristobalJunta <junta.kristobal@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pytelegrambotapi = "^3.6.7"
+requests = "^2.23.0"
+python-dotenv = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+ipython = "^2.0.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

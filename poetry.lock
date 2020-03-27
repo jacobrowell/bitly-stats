@@ -1,0 +1,190 @@
+[[package]]
+category = "main"
+description = "Python package for providing Mozilla's CA Bundle."
+name = "certifi"
+optional = false
+python-versions = "*"
+version = "2019.11.28"
+
+[[package]]
+category = "main"
+description = "Universal encoding detector for Python 2 and 3"
+name = "chardet"
+optional = false
+python-versions = "*"
+version = "3.0.4"
+
+[[package]]
+category = "dev"
+description = "The standard Python readline extension statically linked against the GNU readline library."
+marker = "sys_platform == \"darwin\" and platform_python_implementation == \"CPython\""
+name = "gnureadline"
+optional = false
+python-versions = "*"
+version = "8.0.0"
+
+[[package]]
+category = "main"
+description = "Internationalized Domain Names in Applications (IDNA)"
+name = "idna"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.9"
+
+[[package]]
+category = "dev"
+description = "IPython: Productive Interactive Computing"
+name = "ipython"
+optional = false
+python-versions = "*"
+version = "2.4.1"
+
+[package.dependencies]
+gnureadline = "*"
+pyreadline = ">=2.0"
+
+[package.extras]
+all = ["nose (>=0.10.1)", "tornado (>=3.1)", "jinja2", "pyzmq (>=2.1.11)", "numpydoc", "Sphinx (>=0.3)", "pygments", "Sphinx (>=1.1)"]
+doc = ["Sphinx (>=1.1)", "numpydoc"]
+nbconvert = ["pygments", "jinja2", "Sphinx (>=0.3)"]
+notebook = ["tornado (>=3.1)", "pyzmq (>=2.1.11)", "jinja2"]
+parallel = ["pyzmq (>=2.1.11)"]
+qtconsole = ["pyzmq (>=2.1.11)", "pygments"]
+test = ["nose (>=0.10.1)", "mock"]
+zmq = ["pyzmq (>=2.1.11)"]
+
+[[package]]
+category = "dev"
+description = "A python implmementation of GNU readline."
+marker = "sys_platform == \"win32\" and platform_python_implementation == \"CPython\""
+name = "pyreadline"
+optional = false
+python-versions = "*"
+version = "2.1"
+
+[[package]]
+category = "main"
+description = "Python Telegram bot api."
+name = "pytelegrambotapi"
+optional = false
+python-versions = "*"
+version = "3.6.7"
+
+[package.dependencies]
+requests = "*"
+six = "*"
+
+[package.extras]
+json = ["ujson"]
+
+[[package]]
+category = "main"
+description = "Add .env support to your django/flask apps in development and deployments"
+name = "python-dotenv"
+optional = false
+python-versions = "*"
+version = "0.12.0"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
+category = "main"
+description = "Python HTTP for Humans."
+name = "requests"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "2.23.0"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+chardet = ">=3.0.2,<4"
+idna = ">=2.5,<3"
+urllib3 = ">=1.21.1,<1.25.0 || >1.25.0,<1.25.1 || >1.25.1,<1.26"
+
+[package.extras]
+security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)", "win-inet-pton"]
+
+[[package]]
+category = "main"
+description = "Python 2 and 3 compatibility utilities"
+name = "six"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "1.14.0"
+
+[[package]]
+category = "main"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+name = "urllib3"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
+version = "1.25.8"
+
+[package.extras]
+brotli = ["brotlipy (>=0.6.0)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
+
+[metadata]
+content-hash = "0935365914d55da766615e2ed4ef02514d9f26b66258c4157a5d772eb9160fea"
+python-versions = "^3.6"
+
+[metadata.files]
+certifi = [
+    {file = "certifi-2019.11.28-py2.py3-none-any.whl", hash = "sha256:017c25db2a153ce562900032d5bc68e9f191e44e9a0f762f373977de9df1fbb3"},
+    {file = "certifi-2019.11.28.tar.gz", hash = "sha256:25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"},
+]
+chardet = [
+    {file = "chardet-3.0.4-py2.py3-none-any.whl", hash = "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"},
+    {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
+]
+gnureadline = [
+    {file = "gnureadline-8.0.0-cp26-cp26m-macosx_10_6_intel.whl", hash = "sha256:59369b0eb7210bdb2acf2940c15a6a9d35c70cde9b6d6c5b5c14b0bfd4fd258a"},
+    {file = "gnureadline-8.0.0-cp27-cp27m-macosx_10_6_intel.whl", hash = "sha256:8c244130b6e31669f76213ddb249c8673b8573214e80829667f17e18abe27487"},
+    {file = "gnureadline-8.0.0-cp27-cp27mu-manylinux1_i686.whl", hash = "sha256:59f6265f24631da28e39054cdd3a52cf02422aa2b955b8d8358b99d4425c3a26"},
+    {file = "gnureadline-8.0.0-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:69c9291b6a7bcf768202b78ed1684b515181e20a3cb680b0265da0d6fdc0f697"},
+    {file = "gnureadline-8.0.0-cp35-cp35m-macosx_10_6_intel.whl", hash = "sha256:fd7ddef98546f1a97eea2ba2120faff4cb7fd52d43f4a16954b5d5531a23eb3e"},
+    {file = "gnureadline-8.0.0-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:fe9b42d92dcd83071c82a5dbd33e36a287bb021d2e29f65abfe3192bf13a360d"},
+    {file = "gnureadline-8.0.0-cp36-cp36m-macosx_10_6_intel.whl", hash = "sha256:5fe0b973372a6deca9b448178acf8117bc80f0c5113facef0be16712cb98feea"},
+    {file = "gnureadline-8.0.0-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:e50ae6f49adfc2c89b995a75a0ce2449e553dbd943a4cd1a2d959caccc20247c"},
+    {file = "gnureadline-8.0.0-cp37-cp37m-macosx_10_6_intel.whl", hash = "sha256:88c1adf00fa8b2124751d7a6a4f8701cf8677d5caccdb16f6a6b24b3ae4f97c0"},
+    {file = "gnureadline-8.0.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:15518acd534a84d8cd3b2431aeca85132c4892600bf3a64edd76ed265909476c"},
+    {file = "gnureadline-8.0.0-cp38-cp38-macosx_10_6_intel.whl", hash = "sha256:650986355bfdbe767fd7e9ce4df20ac4993f8c3b60f0829b3c1f951ce31be846"},
+    {file = "gnureadline-8.0.0.tar.gz", hash = "sha256:61eef72ed02dad415ede49752e972a1d2bd8c35c1e4464565d7effd806c99476"},
+]
+idna = [
+    {file = "idna-2.9-py2.py3-none-any.whl", hash = "sha256:a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"},
+    {file = "idna-2.9.tar.gz", hash = "sha256:7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb"},
+]
+ipython = [
+    {file = "ipython-2.4.1-py27-none-any.whl", hash = "sha256:5730d5e6e81140d2dcfe50d2cf920396d14bd22f8bfe0172e89898763e242bf3"},
+    {file = "ipython-2.4.1-py3-none-any.whl", hash = "sha256:25282f69595bf89e1c31fe211df99e21ae3cd98ac187c31f643b9b85e9c7740c"},
+    {file = "ipython-2.4.1.tar.gz", hash = "sha256:6d350b5c2d3e925b0ff6167658812d720b891e476238d924504e2f7f483e9217"},
+    {file = "ipython-2.4.1.zip", hash = "sha256:a519a53b5b478e2f8fd36056bdb72406eaa64e043629166cdc3d6097718ddf9a"},
+]
+pyreadline = [
+    {file = "pyreadline-2.1.win-amd64.exe", hash = "sha256:9ce5fa65b8992dfa373bddc5b6e0864ead8f291c94fbfec05fbd5c836162e67b"},
+    {file = "pyreadline-2.1.win32.exe", hash = "sha256:65540c21bfe14405a3a77e4c085ecfce88724743a4ead47c66b84defcf82c32e"},
+    {file = "pyreadline-2.1.zip", hash = "sha256:4530592fc2e85b25b1a9f79664433da09237c1a270e4d78ea5aa3a2c7229e2d1"},
+]
+pytelegrambotapi = [
+    {file = "pyTelegramBotAPI-3.6.7.tar.gz", hash = "sha256:0efd908ae5a52affe312579916166be2688dc17888593ccf22d4dfbbe41bf66a"},
+]
+python-dotenv = [
+    {file = "python-dotenv-0.12.0.tar.gz", hash = "sha256:92b3123fb2d58a284f76cc92bfe4ee6c502c32ded73e8b051c4f6afc8b6751ed"},
+    {file = "python_dotenv-0.12.0-py2.py3-none-any.whl", hash = "sha256:81822227f771e0cab235a2939f0f265954ac4763cafd806d845801c863bf372f"},
+]
+requests = [
+    {file = "requests-2.23.0-py2.py3-none-any.whl", hash = "sha256:43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee"},
+    {file = "requests-2.23.0.tar.gz", hash = "sha256:b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6"},
+]
+six = [
+    {file = "six-1.14.0-py2.py3-none-any.whl", hash = "sha256:8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"},
+    {file = "six-1.14.0.tar.gz", hash = "sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"},
+]
+urllib3 = [
+    {file = "urllib3-1.25.8-py2.py3-none-any.whl", hash = "sha256:2f3db8b19923a873b3e5256dc9c2dedfa883e33d87c690d9c7913e1f40673cdc"},
+    {file = "urllib3-1.25.8.tar.gz", hash = "sha256:87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"},
+]
