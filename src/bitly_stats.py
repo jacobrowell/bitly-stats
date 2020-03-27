@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+import sys
 from datetime import datetime
 from collections import defaultdict, OrderedDict
 from urllib.parse import urljoin
@@ -10,12 +11,19 @@ from telebot import TeleBot
 import settings
 
 
-logging.getLogger().setLevel(logging.DEBUG)
+# Validate settings
+if not all([settings.TELEGRAM_TOKEN, settings.BITLY_TOKEN]):
+    logging.critical("API tokens missing")
+    sys.exit(1)
+
+if not settings.TELEGRAM_CHAT_ID:
+    logging.critical("Telegram chat id missing")
+    sys.exit(1)
 
 
 def filter_by_tag(tagname):
     def check_item(item):
-        return tagname in item["tags"]
+        return tagname in item["tags"] if tagname else True
 
     return check_item
 
@@ -56,7 +64,8 @@ group_guid = user_data["default_group_guid"]
 url = f"{api_base}/groups/{group_guid}/bitlinks"
 bitlinks_data = session.get(url).json()
 
-links = list(filter(filter_by_tag("vodokanal"), bitlinks_data["links"]))
+links = list(filter(filter_by_tag(settings.FILTER_TAG),
+                    bitlinks_data["links"]))
 link_stats = {}
 
 for link in links:
@@ -69,4 +78,6 @@ link_stats_grouped = group_stats(link_stats)
 link_stats_formatted = format_stats(link_stats_grouped)
 
 bot = TeleBot(settings.TELEGRAM_TOKEN)
-bot.send_message("@vklinkstats", link_stats_formatted, parse_mode="markdown")
+bot.send_message(settings.TELEGRAM_CHAT_ID,
+                 link_stats_formatted,
+                 parse_mode="markdown")
