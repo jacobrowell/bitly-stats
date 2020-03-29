@@ -3,7 +3,7 @@ import logging
 import sys
 from datetime import datetime
 from collections import defaultdict, OrderedDict
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlencode
 
 import requests
 from telebot import TeleBot
@@ -42,7 +42,11 @@ def group_stats(stats):
 
 
 def format_stats(stats):
-    formatted = [datetime.now().strftime("%d-%m-%Y"), ""]
+    today = datetime.now().strftime("%d-%m-%Y")
+    formatted = [
+        f"Переходы по ссылкам на ботов за {today}",
+        ""
+    ]
     for group, items in stats.items():
         formatted.append(f"*{group}*")
         for source, clicks in items.items():
@@ -70,7 +74,11 @@ link_stats = {}
 
 for link in links:
     bitlink = link["id"]
-    url = f"{api_base}/bitlinks/{bitlink}/clicks/summary"
+    query_params = urlencode({
+        "unit": "day",
+        "units": 1,
+    })
+    url = f"{api_base}/bitlinks/{bitlink}/clicks/summary?{query_params}"
     link_data = session.get(url).json()
     link_stats[link["title"]] = link_data["total_clicks"]
 
